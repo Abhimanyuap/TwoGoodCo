@@ -1,3 +1,9 @@
+// locomotive
+
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
 
  videoAnimation = () =>{
     var videocont = document.querySelector('#video-container');
@@ -19,8 +25,8 @@
     
     videocont.addEventListener("mousemove", function(dets){
         gsap.to(playbtn,{
-            left:dets.x-40, 
-            top:dets.y-40
+            left:dets.x-50, 
+            top:dets.y-130
         })
     });
 }
@@ -47,3 +53,5 @@ gsap.from("#page1 #video-container",{
 }
 
 loadinganimation();
+
+// details of page 2 image

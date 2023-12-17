@@ -63,7 +63,7 @@ html,body{
 /* -----------page2 start ----------- */
 
 #page2{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: antiquewhite;
     position: relative;
@@ -76,11 +76,176 @@ html,body{
 #page2 .elm{
     height: 100%;
     width: 31%;
-    background-color: aqua;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #page2 .elm img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    scale: 1.1;
+}
+
+/* details inside image */
+#page2 .elm .dets{
+   height: 50px;
+   width: 25vw;
+   background-color: cornsilk;
+   position: absolute;
+   border-radius: 20px;
+   overflow: hidden;
+   z-index: 9;
+}
+
+#page2 #elm1 .dets{
+    background-color: rgb(190, 252, 231);
+} 
+
+#page2 #elm2 .dets{
+    background-color: rgb(249, 180, 212);
+}
+
+#page2 #elm3 .dets{
+    background-color: rgb(231, 231, 205);
+}
+
+.dets-child1{
+    height: 50px;
+    width: 25vw;
+    padding: 0px 3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page2 .elm .dets .shop-span{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+#page2 .elm .dets .messina-span{
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+ }
+
+.dets-child2{
+    height: 35vh;
+    width: 25vw;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: cornsilk; */
+    text-transform: uppercase;
+}
+
+.dets-child2 div{
+    height: 100%;
+    width: 45%;
+}
+
+.dets-child2 div span{
+    font-size: 12px;
+}
+
+
+#page2 .elm .dets:hover{
+     height: 230px;
+     transition: 0.5s;
+}
+
+
+/* ----------page2 end------------ */
+
+/* -----------page3 start------------- */
+
+#page3{
+    
+}
+
+
+/* ------------responsive----------- */
+
+@media (max-width:600px){
+    #page1{
+        min-height: 70vh;
+        padding: 0 3vw;
+        padding-top: 25vh;
+    }
+    #page1 h1{
+        font-size: 15.4vw;
+        line-height: 14vw;
+        letter-spacing: -3px;
+    }
+
+    #video-container{
+        height: 50vh;
+        margin-top: 3vw;
+    }
+    #video-container #play{
+        padding: 7vw 5.4vw;
+        font-size: 3.5vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        opacity: 1;
+        scale: 1;
+    }
+
+
+    /* -----------page2 start ----------- */
+
+#page2{
+    width: 100%;
+    background-color: red;
+    position: relative;
+    padding: 2vw 3vw;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+#page2 .elm{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 3vw;
+}
+
+#page2 .elm img{
+    scale: 1.1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+}
+
+@media (max-width:450px){
+    #page1{
+        min-height: 60vh;
+        padding: 0 2vw;
+        padding-top: 25vh;
+    }
+    #page1 #video-container{
+       height: 25vh;
+    }
+}
+
+@media (max-width:300px){
+    #page1{
+        min-height: 65vh;
+        padding: 0 2vw;
+        padding-top: 25vh;
+    }
+    #page1 #video-container{
+       height: 25vh;
+    }
 }
